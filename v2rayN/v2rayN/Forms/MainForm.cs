@@ -1629,8 +1629,12 @@ namespace v2rayN.Forms
 
 
 
+
         #endregion
 
-      
+        private void toolStripAddSSR_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
