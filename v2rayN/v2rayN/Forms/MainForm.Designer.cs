@@ -36,6 +36,7 @@
             this.menuAddVmessServer = new System.Windows.Forms.ToolStripMenuItem();
             this.menuAddVlessServer = new System.Windows.Forms.ToolStripMenuItem();
             this.menuAddShadowsocksServer = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuAddSSRServer = new System.Windows.Forms.ToolStripMenuItem();
             this.menuAddSocksServer = new System.Windows.Forms.ToolStripMenuItem();
             this.menuAddCustomServer = new System.Windows.Forms.ToolStripMenuItem();
             this.menuAddServers = new System.Windows.Forms.ToolStripMenuItem();
@@ -125,7 +126,6 @@
             this.tsbPromotion = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbClose = new System.Windows.Forms.ToolStripButton();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.scMain)).BeginInit();
             this.scMain.Panel1.SuspendLayout();
             this.scMain.Panel2.SuspendLayout();
@@ -180,7 +180,7 @@
             this.menuAddVmessServer,
             this.menuAddVlessServer,
             this.menuAddShadowsocksServer,
-            this.toolStripMenuItem1,
+            this.menuAddSSRServer,
             this.menuAddSocksServer,
             this.menuAddCustomServer,
             this.menuAddServers,
@@ -228,6 +228,12 @@
             this.menuAddShadowsocksServer.Name = "menuAddShadowsocksServer";
             resources.ApplyResources(this.menuAddShadowsocksServer, "menuAddShadowsocksServer");
             this.menuAddShadowsocksServer.Click += new System.EventHandler(this.menuAddShadowsocksServer_Click);
+            // 
+            // menuAddSSRServer
+            // 
+            this.menuAddSSRServer.Name = "menuAddSSRServer";
+            resources.ApplyResources(this.menuAddSSRServer, "menuAddSSRServer");
+            this.menuAddSSRServer.Click += new System.EventHandler(this.menuAddShadowsocksRServer);
             // 
             // menuAddSocksServer
             // 
@@ -816,12 +822,6 @@
             this.tsbClose.Name = "tsbClose";
             this.tsbClose.Click += new System.EventHandler(this.tsbClose_Click);
             // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.menuAddShadowsocksRServer);
-            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -953,7 +953,7 @@
         private System.Windows.Forms.ToolStripButton tsbReload;
         private System.Windows.Forms.ToolStripButton tsbQRCodeSwitch;
         private System.Windows.Forms.ToolStripMenuItem menuAddVlessServer;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem menuAddSSRServer;
     }
 }
 

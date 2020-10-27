@@ -201,15 +201,18 @@ namespace v2rayN
                   {
                       return string.Empty;
                   }
+                  //过滤掉http://
+                  line = Regex.Replace(line, "(.*)://", string.Empty);
+                  if ((Index = line.IndexOf(comments)) > -1)
+                  {
+                      line = line.Substring(0, Index);
+                  }
                   //过滤掉句尾逗号
                   if (line.EndsWith(","))
                   {
-                      return line.Substring(0, line.Length - 1);
+                      line = line.Substring(0, line.Length - 1);
                   }
-                  if ((Index = line.IndexOf(comments)) > -1)
-                  {
-                      return line.Substring(0, Index);
-                  }
+
                   return line;
               }).Where(line => !string.IsNullOrEmpty(line)).ToList();
         }

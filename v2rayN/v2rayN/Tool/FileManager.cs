@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
 using System.Text;
@@ -68,6 +69,42 @@ namespace v2rayN.Tool
                 throw ex;
             }
         }
+
+        public static void WriteToFile(List<string> str, string Path, Encoding encoding)
+        {
+            try
+            {
+                using (StreamWriter sw = new StreamWriter(Path, false, encoding))
+                {
+                    foreach (var s in str)
+                    {
+                        sw.WriteLine(s);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Utils.SaveLog(e.Message, e);
+                throw e;
+            }
+        }
+
+        public static void WriteToFile(string str, string Path, Encoding encoding)
+        {
+            try
+            {
+                using (StreamWriter sw = new StreamWriter(Path, false, encoding))
+                {
+                    sw.Write(str);
+                }
+            }
+            catch (Exception e)
+            {
+                Utils.SaveLog(e.Message, e);
+                throw e;
+            }
+        }
+
         public static bool ZipExtractToFile(string fileName)
         {
             try

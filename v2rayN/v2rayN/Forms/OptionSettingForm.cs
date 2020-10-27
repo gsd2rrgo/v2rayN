@@ -6,6 +6,8 @@ using v2rayN.Base;
 using v2rayN.HttpProxyHandler;
 using v2rayN.Tool;
 using System.Linq;
+using System.IO;
+using System.Text;
 
 namespace v2rayN.Forms
 {
@@ -150,8 +152,11 @@ namespace v2rayN.Forms
 
         private void InitUserPAC()
         {
-            FileManager.NonExclusiveReadAllText("");
-            txtuserPacRule.Text = Utils.List2String(config.userPacRule, true);
+            if (!File.Exists(Global.userPacConfigFile))
+            { 
+                FileManager.WriteToFile(config.userPacRule, Global.userPacConfigFile, Encoding.Default);
+            }
+            txtuserPacRule.Text = FileManager.NonExclusiveReadAllText(Global.userPacConfigFile);
         }
 
         private void btnOK_Click(object sender, EventArgs e)
@@ -374,9 +379,7 @@ namespace v2rayN.Forms
         private int SaveUserPAC()
         {
             var userPacRule = txtuserPacRule.Text.StringReadLines().ToList();
-            //string userPacRule = txtuserPacRule.Text.TrimEx();
-            //userPacRule = userPacRule.Replace("\"", "");
-
+            FileManager.WriteToFile(txtuserPacRule.Text, Global.userPacConfigFile, Encoding.Default);
             config.userPacRule = Utils.CutComments(userPacRule);
 
             return 0;

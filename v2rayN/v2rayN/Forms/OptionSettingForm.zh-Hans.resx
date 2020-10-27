@@ -367,7 +367,7 @@
     <value>  用户PAC设置  </value>
   </data>
   <data name="label4.Text" xml:space="preserve">
-    <value>*设置用户PAC规则，用逗号(,)隔开</value>
+    <value>*设置用户PAC规则，每行一个规则, 可以使用 "//" 注释</value>
   </data>
   <data name="btnOK.Text" xml:space="preserve">
     <value>确定(&amp;O)</value>
