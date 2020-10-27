@@ -919,6 +919,11 @@ namespace v2rayN.Forms
             ShowForm();
         }
 
+        private void menuAddShadowsocksRServer(object sender, EventArgs e)
+        {
+
+        }
+
         private void menuAddSocksServer_Click(object sender, EventArgs e)
         {
             AddServer4Form fm = new AddServer4Form
@@ -1631,10 +1636,5 @@ namespace v2rayN.Forms
 
 
         #endregion
-
-        private void toolStripAddSSR_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

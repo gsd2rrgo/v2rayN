@@ -820,7 +820,7 @@
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripAddSSR_Click);
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.menuAddShadowsocksRServer);
             // 
             // MainForm
             // 

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
@@ -47,6 +48,13 @@ namespace v2rayN.Base
         public static string TrimEx(this string value)
         {
             return value == null ? string.Empty : value.Trim();
+        }
+
+        public static string[] StringReadLines(this string value)
+        {
+            return value.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)
+                .Select(t => t.TrimStart().TrimEnd())
+                .ToArray();
         }
     }
 }

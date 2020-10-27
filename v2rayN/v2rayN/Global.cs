@@ -41,6 +41,11 @@ namespace v2rayN
         public const string v2rayConfigFileName = "config.json";
 
         /// <summary>
+        /// 用于显示UserPac的文件.
+        /// </summary>
+        public const string userPacConfigFile = "userPac.conf";
+
+        /// <summary>
         /// v2ray客户端配置样例文件名
         /// </summary>
         public const string v2raySampleClient = "v2rayN.Sample.SampleClientConfig.txt";

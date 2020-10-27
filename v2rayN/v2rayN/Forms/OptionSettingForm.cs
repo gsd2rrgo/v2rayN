@@ -4,6 +4,8 @@ using System.Windows.Forms;
 using v2rayN.Handler;
 using v2rayN.Base;
 using v2rayN.HttpProxyHandler;
+using v2rayN.Tool;
+using System.Linq;
 
 namespace v2rayN.Forms
 {
@@ -148,6 +150,7 @@ namespace v2rayN.Forms
 
         private void InitUserPAC()
         {
+            FileManager.NonExclusiveReadAllText("");
             txtuserPacRule.Text = Utils.List2String(config.userPacRule, true);
         }
 
@@ -362,12 +365,19 @@ namespace v2rayN.Forms
             return 0;
         }
 
+        /// <summary>
+        /// 规则变更为: 
+        /// 每行一个网址规则, 
+        /// "//"后面用于添加注释
+        /// </summary>
+        /// <returns></returns>
         private int SaveUserPAC()
         {
-            string userPacRule = txtuserPacRule.Text.TrimEx();
-            userPacRule = userPacRule.Replace("\"", "");
+            var userPacRule = txtuserPacRule.Text.StringReadLines().ToList();
+            //string userPacRule = txtuserPacRule.Text.TrimEx();
+            //userPacRule = userPacRule.Replace("\"", "");
 
-            config.userPacRule = Utils.String2List(userPacRule);
+            config.userPacRule = Utils.CutComments(userPacRule);
 
             return 0;
         }

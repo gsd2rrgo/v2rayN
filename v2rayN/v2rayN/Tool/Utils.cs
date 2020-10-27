@@ -19,6 +19,7 @@ using ZXing.Common;
 using ZXing.QrCode;
 using System.Security.Principal;
 using v2rayN.Base;
+using System.Linq;
 
 namespace v2rayN
 {
@@ -183,6 +184,34 @@ namespace v2rayN
             {
                 return new List<string>();
             }
+        }
+
+        /// <summary>
+        /// 过滤掉注释
+        /// </summary>
+        /// <param name="strs"></param>
+        /// <returns></returns>
+        public static List<string> CutComments(List<string> strs)
+        {
+            const string comments = "//";
+            return strs.Select(line => line.TrimStart().TrimEnd()).Select(line =>
+              {
+                  int Index = 0;
+                  if (line.StartsWith(comments))
+                  {
+                      return string.Empty;
+                  }
+                  //过滤掉句尾逗号
+                  if (line.EndsWith(","))
+                  {
+                      return line.Substring(0, line.Length - 1);
+                  }
+                  if ((Index = line.IndexOf(comments)) > -1)
+                  {
+                      return line.Substring(0, Index);
+                  }
+                  return line;
+              }).Where(line => !string.IsNullOrEmpty(line)).ToList();
         }
 
         /// <summary>
