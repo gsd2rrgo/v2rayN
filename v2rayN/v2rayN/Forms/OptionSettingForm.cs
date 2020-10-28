@@ -156,7 +156,7 @@ namespace v2rayN.Forms
             { 
                 FileManager.WriteToFile(config.userPacRule, Global.userPacConfigFile, Encoding.Default);
             }
-            txtuserPacRule.Text = FileManager.NonExclusiveReadAllText(Global.userPacConfigFile);
+            txtuserPacRule.Text = FileManager.NonExclusiveReadAllText(Global.userPacConfigFile, Encoding.UTF8);
         }
 
         private void btnOK_Click(object sender, EventArgs e)
@@ -379,7 +379,7 @@ namespace v2rayN.Forms
         private int SaveUserPAC()
         {
             var userPacRule = txtuserPacRule.Text.StringReadLines().ToList();
-            FileManager.WriteToFile(txtuserPacRule.Text, Global.userPacConfigFile, Encoding.Default);
+            FileManager.WriteToFile(txtuserPacRule.Text, Global.userPacConfigFile, Encoding.UTF8);
             config.userPacRule = Utils.CutComments(userPacRule);
 
             return 0;
