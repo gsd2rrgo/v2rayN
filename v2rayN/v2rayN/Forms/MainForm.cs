@@ -497,6 +497,9 @@ namespace v2rayN.Forms
                 case (int)EConfigType.Trojan:
                     fm = new AddServer6Form();
                     break;
+                case (int)EConfigType.SSR:
+                    fm = new AddServer3SSRForm();
+                    break;
                 default:
                     fm = new AddServer2Form();
                     break;
@@ -864,7 +867,8 @@ namespace v2rayN.Forms
 
         private void menuAddShadowsocksRServer(object sender, EventArgs e)
         {
-
+            ShowServerForm((int)EConfigType.SSR, -1);
+            ShowForm();
         }
 
         private void menuAddSocksServer_Click(object sender, EventArgs e)

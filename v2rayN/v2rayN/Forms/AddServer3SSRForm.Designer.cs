@@ -1,6 +1,6 @@
 ﻿namespace v2rayN.Forms
 {
-    partial class AddServer3Form
+    partial class AddServer3SSRForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddServer3Form));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddServer3SSRForm));
             this.btnClose = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.cmbSecurity = new System.Windows.Forms.ComboBox();
             this.txtRemarks = new System.Windows.Forms.TextBox();
@@ -63,6 +71,14 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.cmbSecurity);
             this.groupBox1.Controls.Add(this.txtRemarks);
@@ -77,6 +93,68 @@
             resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
+            // 
+            // textBox2
+            // 
+            resources.ApplyResources(this.textBox2, "textBox2");
+            this.textBox2.Name = "textBox2";
+            // 
+            // label9
+            // 
+            resources.ApplyResources(this.label9, "label9");
+            this.label9.Name = "label9";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            resources.GetString("comboBox2.Items"),
+            resources.GetString("comboBox2.Items1"),
+            resources.GetString("comboBox2.Items2"),
+            resources.GetString("comboBox2.Items3"),
+            resources.GetString("comboBox2.Items4"),
+            resources.GetString("comboBox2.Items5"),
+            resources.GetString("comboBox2.Items6"),
+            resources.GetString("comboBox2.Items7")});
+            resources.ApplyResources(this.comboBox2, "comboBox2");
+            this.comboBox2.Name = "comboBox2";
+            // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.Name = "label8";
+            // 
+            // textBox1
+            // 
+            resources.ApplyResources(this.textBox1, "textBox1");
+            this.textBox1.Name = "textBox1";
+            // 
+            // label7
+            // 
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.Name = "label7";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            resources.GetString("comboBox1.Items"),
+            resources.GetString("comboBox1.Items1"),
+            resources.GetString("comboBox1.Items2"),
+            resources.GetString("comboBox1.Items3"),
+            resources.GetString("comboBox1.Items4"),
+            resources.GetString("comboBox1.Items5"),
+            resources.GetString("comboBox1.Items6"),
+            resources.GetString("comboBox1.Items7")});
+            resources.ApplyResources(this.comboBox1, "comboBox1");
+            this.comboBox1.Name = "comboBox1";
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
             // 
             // label13
             // 
@@ -183,7 +261,7 @@
             resources.ApplyResources(this.menuItemImportClipboard, "menuItemImportClipboard");
             this.menuItemImportClipboard.Click += new System.EventHandler(this.menuItemImportClipboard_Click);
             // 
-            // AddServer3Form
+            // AddServer3SSRForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -194,7 +272,7 @@
             this.Controls.Add(this.menuServer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MinimizeBox = true;
-            this.Name = "AddServer3Form";
+            this.Name = "AddServer3SSRForm";
             this.Load += new System.EventHandler(this.AddServer3Form_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -227,5 +305,13 @@
         private System.Windows.Forms.MenuStrip menuServer;
         private System.Windows.Forms.ToolStripMenuItem MenuItem1;
         private System.Windows.Forms.ToolStripMenuItem menuItemImportClipboard;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label4;
     }
 }

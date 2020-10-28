@@ -378,6 +378,74 @@ namespace v2rayN.Mode
     }
 
     [Serializable]
+    public class SSRItem
+    {
+        public SSRItem()
+        {
+            Address = string.Empty;
+            Port = 0;
+            ID = string.Empty;
+            Security = string.Empty;
+            Agreement = string.Empty;
+            Agreement_Para = string.Empty;
+            StreamSecurity = string.Empty;
+            StreamSecurity_Para = string.Empty;
+            Remarks = string.Empty;
+            SSRUrl = string.Empty;
+        }
+
+        /// <summary>
+        /// 地址
+        /// </summary>
+        public string Address { get; set; }
+
+        /// <summary>
+        /// 端口
+        /// </summary>
+        public int Port { get; set; }
+
+        /// <summary>
+        /// 密码
+        /// </summary>
+        public string ID { get; set; }
+
+        /// <summary>
+        /// 加密
+        /// </summary>
+        public string Security { get; set; }
+
+        /// <summary>
+        /// 协议
+        /// </summary>
+        public string Agreement { get; set; }
+
+        /// <summary>
+        /// 协议参数
+        /// </summary>
+        public string Agreement_Para { get; set; }
+
+        /// <summary>
+        /// 混淆
+        /// </summary>
+        public string StreamSecurity { get; set; }
+
+        /// <summary>
+        /// 混淆参数
+        /// </summary>
+        public string StreamSecurity_Para { get; set; }
+
+        /// <summary>
+        /// 别名(备注)
+        /// </summary>
+        public string Remarks { get; set; }
+
+        /// <summary>
+        /// SSR链接
+        /// </summary>
+        public string SSRUrl { get; set; }
+    }
+
+    [Serializable]
     public class VmessItem
     {
         public VmessItem()
@@ -421,18 +489,11 @@ namespace v2rayN.Mode
             switch (configType)
             {
                 case (int)EConfigType.Vmess:
-                    summary += string.Format("{0}({1}:{2})", remarks, addr, port);
-                    break;
                 case (int)EConfigType.Shadowsocks:
-                    summary += string.Format("{0}({1}:{2})", remarks, addr, port);
-                    break;
                 case (int)EConfigType.Socks:
-                    summary += string.Format("{0}({1}:{2})", remarks, addr, port);
-                    break;
                 case (int)EConfigType.VLESS:
-                    summary += string.Format("{0}({1}:{2})", remarks, addr, port);
-                    break;
                 case (int)EConfigType.Trojan:
+                case (int)EConfigType.SSR:
                     summary += string.Format("{0}({1}:{2})", remarks, addr, port);
                     break;
                 default:

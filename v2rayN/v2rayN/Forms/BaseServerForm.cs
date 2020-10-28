@@ -8,6 +8,7 @@ namespace v2rayN.Forms
     {
         public int EditIndex { get; set; }
         protected VmessItem vmessItem = null;
+        protected SSRItem SSRItem = null;
 
         public BaseServerForm()
         {
